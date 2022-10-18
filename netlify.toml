@@ -1,4 +1,4 @@
 [build]
   base    = "."
-  publish = "_build/html"
-  command = "make html"
+  publish = "_build/revealjs"
+  command = "make revealjs"

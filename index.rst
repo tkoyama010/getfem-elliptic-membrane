@@ -1,20 +1,22 @@
-.. opencae-2022-10-22 documentation master file, created by
-   sphinx-quickstart on Wed Oct 19 00:15:55 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+======================================
+Sphinxでのプレゼンテーションを体験する
+======================================
 
-Welcome to opencae-2022-10-22's documentation!
-==============================================
+準備
+====
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+Python仮想環境を用意する
+------------------------
 
+ローカル共通環境に不必要なライブラリをインストールしないために、
+``venv`` を使って仮想環境を用意します。
 
+ドキュメントを新規作成する
+--------------------------
 
-Indices and tables
-==================
+``sphinx-quickstart`` を使って、ドキュメントに必要なファイル一式を用意します。
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+執筆
+====
+
+(TBD)

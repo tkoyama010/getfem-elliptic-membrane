@@ -12,6 +12,8 @@ GetFEMによるElliptic Membraneベンチマークテスト
    現在、FEABerというプロジェクトに参加しています。
    このプロジェクトは複数のオープンソースプロジェクトの
    FEAコードをベンチマークするプロジェクトです。
+   参加プログラムにはCalculiX, Code-Aster, FrontISTR があります。
+   ベンチマークテストは"The Standard NAFEMS Benchmarks"から引用しています。
 
 問題の説明
 ==========

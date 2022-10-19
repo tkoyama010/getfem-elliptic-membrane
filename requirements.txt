@@ -1,2 +1,2 @@
 Sphinx==5.3.0
-sphinx-revealjs==2.2.0
+sphinx-revealjs==1.0.1

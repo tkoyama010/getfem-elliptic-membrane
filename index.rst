@@ -28,6 +28,32 @@ GetFEMによるElliptic Membraneベンチマークテスト
 Coarse model
 ------------
 
+.. tabs::
+
+   .. tab:: JupyterLab
+
+      Here's a quick demo of PyVista running within `Jupyterlab
+      <https://jupyter.org/>`_.
+
+      .. raw:: html
+
+         <video width="100%" height="auto" controls autoplay muted>
+           <source src="_static/pyvista_jupyterlab_demo.mp4" type="video/mp4">
+           Your browser does not support the video tag.
+         </video>
+
+   .. tab:: IPython
+
+      Here's a quick demo of PyVista running within a terminal using `IPython
+      <https://ipython.org/>`_.
+
+      .. raw:: html
+
+         <video width="100%" height="auto" controls autoplay muted>
+           <source src="_static/pyvista_ipython_demo.mp4" type="video/mp4">
+           Your browser does not support the video tag.
+         </video>
+
 .. ベンチマークに使用するメッシュパターンはCoarse modelとFine modelの2種類としました。
    使用した要素は1次要素、2次要素およびそれらの低減要素です。
    Coarse modelのメッシュはこちらの通りです。

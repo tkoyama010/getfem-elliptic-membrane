@@ -22,48 +22,75 @@ GetFEMによるElliptic Membraneベンチマークテスト
 .. 今回対象とした問題はThe Standard NAFEMS BenchmarksにLE1として掲載されている問題です。
    圧力を負荷された楕円形状に発生する応力を確認するベンチマークになっています。
 
-条件
-====
+メッシュ図
+==========
 
-Coarse model
-------------
+ベンチマークに使用するメッシュパターンは粗いメッシュと細いメッシュの2種類としました。
+使用した要素は1次要素、2次要素およびそれらの低減要素です。
 
 .. tabs::
 
-   .. tab:: JupyterLab
+   .. tab:: 粗い4角形1次要素
 
-      Here's a quick demo of PyVista running within `Jupyterlab
-      <https://jupyter.org/>`_.
+      .. figure:: coarse-quadrilateron-1d.png
+         :align: center
+         :scale: 50
 
-      .. raw:: html
+   .. tab:: 粗い4角形2次要素
 
-         <video width="100%" height="auto" controls autoplay muted>
-           <source src="_static/pyvista_jupyterlab_demo.mp4" type="video/mp4">
-           Your browser does not support the video tag.
-         </video>
+      .. figure:: coarse-quadrilateron-2d.png
+         :align: center
+         :scale: 50
 
-   .. tab:: IPython
+   .. tab:: 粗い3角形1次要素
 
-      Here's a quick demo of PyVista running within a terminal using `IPython
-      <https://ipython.org/>`_.
+      .. figure:: coarse-triangle-1d.png
+         :align: center
+         :scale: 50
 
-      .. raw:: html
+   .. tab:: 粗い3角形2次要素
 
-         <video width="100%" height="auto" controls autoplay muted>
-           <source src="_static/pyvista_ipython_demo.mp4" type="video/mp4">
-           Your browser does not support the video tag.
-         </video>
+      .. figure:: coarse-triangle-2d.png
+         :align: center
+         :scale: 50
 
-.. ベンチマークに使用するメッシュパターンはCoarse modelとFine modelの2種類としました。
-   使用した要素は1次要素、2次要素およびそれらの低減要素です。
-   Coarse modelのメッシュはこちらの通りです。
-   このメッシュはPyVistaを使用した可視化のスクリプトで描画しています。
-   todo::タブを使用してスクリプトとメッシュを表示する。
+   .. tab:: 細い4角形1次要素
 
-Fine model
-----------
+      .. figure:: fine-quadrilateron-1d.png
+         :align: center
+         :scale: 50
 
-.. Fine modelのメッシュはこちらの通りです。
+   .. tab:: 細い4角形2次要素
+
+      .. figure:: fine-quadrilateron-2d.png
+         :align: center
+         :scale: 50
+
+   .. tab:: 細い3角形1次要素
+
+      .. figure:: fine-triangle-1d.png
+         :align: center
+         :scale: 50
+
+   .. tab:: 細い3角形2次要素
+
+      .. figure:: fine-triangle-2d.png
+         :align: center
+         :scale: 50
+
+   .. tab:: Pythonスクリプト
+
+      このメッシュはPyVistaを使用したPythonスクリプトで描画しています。
+
+      .. literalinclude:: coarse-quadrilateron-1d.py
+         :linenos:
+         :lines: 43-62
+
+
+細いメッシュ
+------------
+
+.. 細いメッシュのメッシュはこちらの通りです。
    todo::タブを使用してスクリプトとメッシュを表示する。
 
 メッシュ作成

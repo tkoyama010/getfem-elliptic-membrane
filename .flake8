@@ -1,4 +1,0 @@
-[flake8]
-ignore =
-    # Quotes (temporary)
-    Q0,

@@ -54,6 +54,7 @@ extensions = [
     "sphinx_tabs.tabs",
     "sphinx.ext.napoleon",
     "sphinx.ext.autodoc",
+    "sphinx.ext.mathjax",
     "jupyter_sphinx",
     "sphinx_copybutton",
     "sphinx_panels",

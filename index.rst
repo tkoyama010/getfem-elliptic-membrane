@@ -13,21 +13,59 @@ GetFEMによるElliptic Membraneベンチマークテスト
    このプロジェクトは複数のオープンソースプロジェクトの
    FEAコードをベンチマークするプロジェクトです。
    参加プログラムにはCalculiX, Code-Aster, FrontISTR があります。
-   ベンチマークテストは"The Standard NAFEMS Benchmarks"から引用しています。
+   ベンチマークテストは `The Standard NAFEMS Benchmarks <http://www.caesarsystems.co.uk/NAFEMS_benchmarks/le1.html>`_から引用しています。
    その際にPythonスクリプトを使用していますが、今回はそれらについても解説する予定です。
 
 問題の説明
 ==========
 
-.. 今回対象とした問題はThe Standard NAFEMS BenchmarksにLE1として掲載されている問題です。
-   圧力を負荷された楕円形状に発生する応力を確認するベンチマークになっています。
+今回対象とした問題は `The Standard NAFEMS Benchmarks` に `LE1 <http://www.caesarsystems.co.uk/NAFEMS_benchmarks/le1.html>`_ として掲載されている問題です。
+圧力を負荷された楕円形状に発生する応力を確認するベンチマークになっています。
 
-メッシュ図
-==========
+.. image:: http://www.caesarsystems.co.uk/NAFEMS_benchmarks/le1_1.gif
+   :align: center
+   :alt: モデル図
+
+メッシュ作成
+============
 
 ベンチマークに使用するメッシュパターンは粗いメッシュと細いメッシュの2種類としました。
 使用した要素は1次要素、2次要素およびそれらの低減要素です。
 粗いメッシュと細いメッシュ図は以下の通りです。
+
+.. tabs::
+
+   .. tab:: 粗いメッシュ
+
+       .. image:: http://www.caesarsystems.co.uk/NAFEMS_benchmarks/le1_2.gif
+           :align: center
+           :alt: 粗いメッシュ
+
+   .. tab:: 細いメッシュ
+
+       .. image:: http://www.caesarsystems.co.uk/NAFEMS_benchmarks/le1_3.gif
+           :align: center
+           :alt: 細いメッシュ
+
+これらのメッシュをどのように作成しているかを説明します。
+まず、GetFEMとNumPyをインポートして空の2次元メッシュを作成します。
+
+.. literalinclude:: coarse-quadrilateron-1d.py
+   :linenos:
+   :lines: 1-4
+
+次に幾何変換のオブジェクトを定義します。
+``GT_QK(2,1)`` は2次元の1次4角形(quadrangle)幾何変換を表しています。
+
+.. literalinclude:: coarse-quadrilateron-1d.py
+   :linenos:
+   :lines: 5-5
+
+変数 ``x`` と変数 ``y`` に節点の座標を定義しておき要素の節点番号の構成を定義します。
+
+.. literalinclude:: coarse-quadrilateron-1d.py
+   :linenos:
+   :lines: 34-39
 
 .. tabs::
 
@@ -81,22 +119,11 @@ GetFEMによるElliptic Membraneベンチマークテスト
 
    .. tab:: Pythonスクリプト
 
-      このメッシュはPyVistaを使用したPythonスクリプトで描画しています。
+      メッシュはPyVistaを使用したPythonスクリプトで描画しています。
 
       .. literalinclude:: coarse-quadrilateron-1d.py
          :linenos:
          :lines: 43-62
-
-メッシュ作成
-============
-
-.. これらのメッシュをどのように作成しているかを説明します。
-
-1次要素
--------
-
-2次要素
--------
 
 荷重の検討
 ==========

@@ -144,6 +144,10 @@ FEAコードをベンチマークするプロジェクトです。
 今回は検討として等価節点荷重の比較を行いました。
 1次要素は参照値との相対誤差が0.01%でした。
 
+.. literalinclude:: coarse-quadrilateron-1d.py
+   :linenos:
+   :lines: 144-148
+
 .. tabs::
 
    .. tab:: 粗い4角形1次要素の等価節点荷重(GetFEM)
@@ -214,6 +218,8 @@ FEAコードをベンチマークするプロジェクトです。
 
        .. math::
            \delta u\left(\eta \right)=\left\{N\left(\eta \right)\right\}^T\left\{U\right\}=\begin{Bmatrix}2\left(\eta -\frac{1}{2}\right)\left(\eta -1\right)&-4\eta \left(\eta -1\right)&2\eta \left(\eta -\frac{1}{2}\right)\end{Bmatrix}\begin{Bmatrix}\delta u_1\\\delta u_2\\\delta u_3\end{Bmatrix}
+
+       ただし、 :math:`u_1` と :math:`u_2` と :math:`u_3` はそれぞれ :math:`\eta = 0` と :math:`\eta = \dfrac{1}{2}` と :math:`\eta = 1` の節点における変位です。
 
        この式を仮想変位の式に代入すると以下の式が得られます。
 

@@ -114,48 +114,7 @@ html_use_smartypants = True
 # a list of builtin themes.
 #
 html_theme = "pydata_sphinx_theme"
-html_context = {
-    "github_user": "pyvista",
-    "github_repo": "pyvista-tutorial",
-    "github_version": "main",
-    "doc_path": "doc",
-}
-html_logo = "./_static/pyvista_logo_sm.png"
-
-html_theme_options = {
-    # 'default_mode': 'light',
-    # 'google_analytics_id': '',
-    "show_prev_next": True,
-    "github_url": "https://github.com/pyvista/pyvista-tutorial",
-    "icon_links": [
-        {
-            "name": "Support",
-            "url": "https://github.com/pyvista/pyvista/discussions",
-            "icon": "fa fa-comment fa-fw",
-        },
-        {
-            "name": "Docs",
-            "url": "https://docs.pyvista.org/",
-            "icon": "fa fa-book fa-fw",
-        },
-        {
-            "name": "Slack Community",
-            "url": "http://slack.pyvista.org",
-            "icon": "fab fa-slack",
-        },
-        {
-            "name": "Contributing",
-            "url": "https://github.com/pyvista/pyvista/blob/main/CONTRIBUTING.rst",
-            "icon": "fa fa-gavel fa-fw",
-        },
-        {
-            "name": "The Paper",
-            "url": "https://doi.org/10.21105/joss.01450",
-            "icon": "fa fa-file-text fa-fw",
-        },
-    ],
-}
-
+html_logo = "./_static/feaber-logo.png"
 html_sidebars = {
     "index": [],
 }

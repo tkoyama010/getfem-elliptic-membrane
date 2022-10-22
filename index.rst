@@ -147,6 +147,10 @@ FEAコードをベンチマークするプロジェクトです。
 .. tabs::
 
    .. tab:: 粗い4角形1次要素の等価節点荷重(GetFEM)
+       .. figure:: coarse-quadrilateron-1d-02.png
+          :align: center
+          :scale: 50
+
        .. table::
 
           ================ ================ ================== ================ ==================
@@ -159,6 +163,10 @@ FEAコードをベンチマークするプロジェクトです。
           ================ ================ ================== ================ ==================
 
    .. tab:: 粗い4角形2次要素の等価節点荷重(GetFEM)
+       .. figure:: coarse-quadrilateron-2d-02.png
+          :align: center
+          :scale: 50
+
        .. table::
 
           ================ ================ ================== ================ ==================
@@ -183,37 +191,39 @@ FEAコードをベンチマークするプロジェクトです。
 
 ただし、 :math:`p` は分布荷重の値、 :math:`h` は要素厚さ :math:`\eta (0 \leqq \eta \leqq 1)` は分布荷重が加わる面の接線方向座標とします。
 
-1次要素
--------
+.. tabs::
 
-1次要素の場合、変位は次の式で与えられます。
+   .. tab:: 1次要素
 
-.. math::
-    \delta u\left(\eta \right)=\left\{N\left(\eta \right)\right\}^T\left\{U\right\}=\begin{Bmatrix}1-\eta &\eta \end{Bmatrix}\begin{Bmatrix}\delta u_1\\\delta u_2\end{Bmatrix}
+       1次要素の場合、変位は次の式で与えられます。
 
-この式を仮想変位の式に代入すると以下の式が得られます。
+       .. math::
+           \delta u\left(\eta \right)=\left\{N\left(\eta \right)\right\}^T\left\{U\right\}=\begin{Bmatrix}1-\eta &\eta \end{Bmatrix}\begin{Bmatrix}\delta u_1\\\delta u_2\end{Bmatrix}
 
-.. math::
-   \delta W=ph\begin{Bmatrix}\frac{1}{2}&\frac{1}{2}\end{Bmatrix}\begin{Bmatrix}\delta u_1\\\delta u_2\end{Bmatrix}
+       ただし、 :math:`u_1` と :math:`u_2` はそれぞれ :math:`\eta = 0` と :math:`\eta = 1` の節点における変位です。
+
+       この式を仮想変位の式に代入すると以下の式が得られます。
+
+       .. math::
+          \delta W=ph\left(\frac{1}{2}\delta u_1+\frac{1}{2}\delta u_2\right)
 
 
-2次要素
--------
+   .. tab:: 2次要素
 
-2次要素の場合、変位は次の式で与えられます。
+       2次要素の場合、変位は次の式で与えられます。
 
-.. math::
-    \delta u\left(\eta \right)=\left\{N\left(\eta \right)\right\}^T\left\{U\right\}=\begin{Bmatrix}2\left(\eta -\frac{1}{2}\right)\left(\eta -1\right)&-4\eta \left(\eta -1\right)&2\eta \left(\eta -\frac{1}{2}\right)\end{Bmatrix}\begin{Bmatrix}\delta u_1\\\delta u_2\\\delta u_3\end{Bmatrix}
+       .. math::
+           \delta u\left(\eta \right)=\left\{N\left(\eta \right)\right\}^T\left\{U\right\}=\begin{Bmatrix}2\left(\eta -\frac{1}{2}\right)\left(\eta -1\right)&-4\eta \left(\eta -1\right)&2\eta \left(\eta -\frac{1}{2}\right)\end{Bmatrix}\begin{Bmatrix}\delta u_1\\\delta u_2\\\delta u_3\end{Bmatrix}
 
-この式を仮想変位の式に代入すると以下の式が得られます。
+       この式を仮想変位の式に代入すると以下の式が得られます。
 
-.. math::
-    \delta W=ph\left(\frac{1}{6}\delta u_1+\frac{4}{6}\delta u_2+\frac{1}{6}\delta u_3\right)
+       .. math::
+           \delta W=ph\left(\frac{1}{6}\delta u_1+\frac{4}{6}\delta u_2+\frac{1}{6}\delta u_3\right)
 
 まとめ
 ======
 
 * GetFEMの機能を使用して The Standard NAFEMS Benchmarks のメッシュを作成できることを確認しました。
-* GetFEMを使用して等価節点荷重の値を計算しました。1次要素は参照値との相対誤差が0.01%でした。2次要素は参照値との相対誤差が0.50%でした。
+* GetFEMを使用して等価節点荷重の値を計算しました。1次要素は参照値との相対誤差が0.01%以下でした。2次要素は参照値との相対誤差が0.50%以上98%以下でした。
 * 等価節点力の計算方法について定式化を確認しました。
 * 今後は単純なモデルで2次要素の等価節点荷重について確認をする予定です。

@@ -40,8 +40,8 @@ os.environ["PYVISTA_BUILDING_GALLERY"] = "true"
 # -- Project information -----------------------------------------------------
 
 project = "PyVista Tutorial"
-copyright = "2022, PyVista Developers"
-author = "PyVista Developers"
+copyright = "2022, Tetsuo Koyama"
+author = "Tetsuo Koyama"
 
 
 # -- General configuration ---------------------------------------------------

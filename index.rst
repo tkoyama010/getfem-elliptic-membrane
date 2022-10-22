@@ -22,7 +22,7 @@ FEAコードをベンチマークするプロジェクトです。
 今回対象とした問題は The Standard NAFEMS Benchmarks に `LE1 <http://www.caesarsystems.co.uk/NAFEMS_benchmarks/le1.html>`_ として掲載されている問題です。
 圧力を負荷された楕円形状に発生する応力を確認するベンチマークになっています。
 
-.. image:: http://www.caesarsystems.co.uk/NAFEMS_benchmarks/le1_1.gif
+.. image:: le1_1.gif
    :align: center
    :alt: モデル図
 
@@ -50,13 +50,13 @@ FEAコードをベンチマークするプロジェクトです。
 
    .. tab:: 粗いメッシュ
 
-       .. image:: http://www.caesarsystems.co.uk/NAFEMS_benchmarks/le1_2.gif
+       .. image:: le1_2.gif
            :align: center
            :alt: 粗いメッシュ
 
    .. tab:: 細いメッシュ
 
-       .. image:: http://www.caesarsystems.co.uk/NAFEMS_benchmarks/le1_3.gif
+       .. image:: le1_3.gif
            :align: center
            :alt: 細いメッシュ
 

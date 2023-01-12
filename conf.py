@@ -50,17 +50,16 @@ author = "Tetsuo Koyama"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "sphinxcontrib.asciinema",
-    "sphinx_tabs.tabs",
-    "sphinx.ext.napoleon",
-    "sphinx.ext.autodoc",
-    "sphinx.ext.mathjax",
-    "jupyter_sphinx",
-    "sphinx_copybutton",
-    "sphinx_panels",
     "jupyter_sphinx",
     "pyvista.ext.plot_directive",
+    "sphinx.ext.autodoc",
     "sphinx.ext.intersphinx",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.napoleon",
+    "sphinx_copybutton",
+    "sphinx_panels",
+    "sphinx_tabs.tabs",
+    "sphinxcontrib.asciinema",
 ]
 
 intersphinx_mapping = {

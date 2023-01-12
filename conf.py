@@ -57,7 +57,6 @@ extensions = [
     "jupyter_sphinx",
     "sphinx_copybutton",
     "sphinx_panels",
-    "jupyter_sphinx",
     "pyvista.ext.plot_directive",
     "sphinx.ext.intersphinx",
 ]

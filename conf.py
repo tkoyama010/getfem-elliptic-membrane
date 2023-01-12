@@ -50,14 +50,14 @@ author = "Tetsuo Koyama"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "jupyter_sphinx",
+    "pyvista.ext.plot_directive",
     "sphinx_tabs.tabs",
     "sphinx.ext.napoleon",
     "sphinx.ext.autodoc",
     "sphinx.ext.mathjax",
-    "jupyter_sphinx",
     "sphinx_copybutton",
     "sphinx_panels",
-    "pyvista.ext.plot_directive",
     "sphinx.ext.intersphinx",
 ]
 

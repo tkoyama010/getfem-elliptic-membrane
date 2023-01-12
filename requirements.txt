@@ -1,1 +1,2 @@
 Sphinx==6.1.2
+pyvista==0.37.0

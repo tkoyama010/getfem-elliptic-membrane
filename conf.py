@@ -52,13 +52,14 @@ author = "Tetsuo Koyama"
 extensions = [
     "jupyter_sphinx",
     "pyvista.ext.plot_directive",
-    "sphinx_tabs.tabs",
-    "sphinx.ext.napoleon",
     "sphinx.ext.autodoc",
+    "sphinx.ext.intersphinx",
     "sphinx.ext.mathjax",
+    "sphinx.ext.napoleon",
     "sphinx_copybutton",
     "sphinx_panels",
-    "sphinx.ext.intersphinx",
+    "sphinx_tabs.tabs",
+    "sphinxcontrib.asciinema",
 ]
 
 intersphinx_mapping = {

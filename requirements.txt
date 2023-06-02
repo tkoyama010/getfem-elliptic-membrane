@@ -1,4 +1,4 @@
-ipython==8.13.2
+ipython==8.14.0
 jupyter_sphinx==0.4.0
 pydata-sphinx-theme==0.13.3
 pyvista==0.39.1

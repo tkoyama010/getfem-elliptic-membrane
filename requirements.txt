@@ -1,5 +1,5 @@
 ipython==8.14.0
-jupyter_sphinx==0.4.0
+jupyter_sphinx==0.5.3
 pydata-sphinx-theme==0.13.3
 pyvista==0.48.4
 sphinx==7.2.5
